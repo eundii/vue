@@ -1,0 +1,367 @@
+// section
+.section-title {
+    padding: 2rem 0;
+    margin: 0 8rem;
+    font-size: 3.2rem;
+    font-weight: $fontBlack;
+    border-top: 0.3rem solid $black;
+    .num {
+        margin-left: 0.2rem;
+        font-size: 1.4rem;
+        vertical-align: text-top;
+    }
+}
+.home {
+    position: relative;
+    height: 100vh;
+    .bg-area {
+        overflow: hidden;
+        .bg-circle {
+            position: absolute;
+            width: 80vh;
+            height: 80vh;
+            border-radius: 50%;
+            filter: blur(10rem);
+            &.circle1 {
+                top: -5rem;
+                background: -o-linear-gradient(-45deg, #23A6D5, #23D5AB);
+                background: -ms-linear-gradient(-45deg, #23A6D5, #23D5AB);
+                background: -moz-linear-gradient(-45deg, #23A6D5, #23D5AB);
+                background: -webkit-linear-gradient(-45deg, #23A6D5, #23D5AB);
+                background: linear-gradient(-45deg, #23A6D5, #23D5AB);
+                filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#23A6D5', endColorstr='#23D5AB', GradientType=1);
+                background-size: 400% 400%;
+                -webkit-animation: bgGradient 5s ease infinite;
+                -o-animation: bgGradient 5s ease infinite;
+                -moz-animation: bgGradient 5s ease infinite;
+                -ms-animation: bgGradient 5s ease infinite;
+                animation: bgGradient 5s ease infinite;
+                overflow: hidden;
+                background-attachment:fixed;
+            }
+            &.circle2 {
+                top: 10rem;
+                left: 50rem;
+                background: -o-linear-gradient(-45deg, #975bf1, #f05cc3);
+                background: -ms-linear-gradient(-45deg, #975bf1, #f05cc3);
+                background: -moz-linear-gradient(-45deg, #975bf1, #f05cc3);
+                background: -webkit-linear-gradient(-45deg, #975bf1, #f05cc3);
+                background: linear-gradient(-45deg, #975bf1, #f05cc3);
+                filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#975bf1', endColorstr='#f05cc3', GradientType=1);
+                background-size: 400% 400%;
+                -webkit-animation: bgGradient 8s ease infinite;
+                -o-animation: bgGradient 8s ease infinite;
+                -moz-animation: bgGradient 8s ease infinite;
+                -ms-animation: bgGradient 8s ease infinite;
+                animation: bgGradient 8s ease infinite;
+                overflow: hidden;
+                background-attachment:fixed;
+            }
+        }
+    }
+    .title-area {
+        position: absolute;
+        top: 50%;
+        left: 8rem;
+        transform: translateY(-50%);
+        .sub-text {
+            font-size: 2.4rem;
+            font-weight: $fontBlack;
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 10rem;
+                height: 0.3rem;
+                margin-right: 2rem;
+                background-color: $black;
+                vertical-align: middle;
+            }
+        }
+        .title {
+            margin-top: 4rem;
+            font-size: 13rem;
+            font-weight: $fontBlack;
+            line-height: 1;
+            span {
+                display: block;
+            }
+            &-sm {
+                font-size: 10rem;
+            }
+            &-black {
+                color: $black;
+            }
+            &-white {
+                color: transparent;
+                -webkit-text-stroke: 0.2rem $black;
+                text-stroke: 0.2rem $black;
+            }
+        }
+    }
+    .scroll-down-marker {
+        position: absolute;
+        bottom: 2rem;
+        right: 8rem;
+        .circle-text{
+            font-size: 1.9rem;
+            font-weight: $fontBold;
+            svg {
+                -webkit-animation: rotate 5s linear infinite;
+                -o-animation: rotate 5s linear infinite;
+                -moz-animation: rotate 5s linear infinite;
+                -ms-animation: rotate 5s linear infinite;
+                animation: rotate 5s linear infinite;
+            }
+        }
+    }
+}
+.skills {
+    padding: 16rem 0 30rem;
+    background-color: $bg1;
+    .marquee {
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8rem 8rem;
+            @include maxWidth();
+            &-title {
+                font-size: 8rem;
+                font-weight: $fontBold;
+                font-style: italic;
+                color: $bg1;
+            }
+        }
+        &__body {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                // z-index: 1;
+                display: block;
+                width: 100%;
+                height: 0.1rem;
+                transform: translate(-50%, -50%);
+                background-color: $line1;
+            }
+        }
+        &__list {
+            z-index: 1;
+            padding: 5rem 0;
+            border-top: 0.1rem solid $line1;
+            border-bottom: 0.1rem solid $line1;
+            &-item {
+                display: inline-block;
+                margin: 0 5rem;
+                vertical-align: middle;
+                .img-area {
+                    background-color: $bg1;
+                    border-radius: 0.8rem;
+                    overflow: hidden;
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                .info-area {
+                    margin-top: 2rem;
+                    .logo-name {
+                        font-size: 2.4rem;
+                        font-weight: $fontBold;
+                        color: $black;
+                    }
+                    .logo-info {
+                        margin-top: 0.4rem;
+                        font-size: 1.6rem;
+                        color: $text6;
+                    }
+                }
+                &.big {
+                    width: 36rem;
+                    .img-area {
+                        height: 36rem;
+                    }
+                }
+                &.small {
+                    width: 26rem;
+                    .img-area {
+                        height: 26rem;
+                    }
+                }
+            }
+        }
+    }
+}
+.projects {
+    padding-bottom: 6rem;
+    .project-list {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        margin: 0 -2rem;
+        &-group {
+            margin: 0 8rem;
+        }
+        &-item {
+            width: 25%;
+            margin: 6rem 0 0;
+            padding: 0 2rem;
+            
+            .item-header {
+                border-top: 0.1rem solid $black;
+                padding: 1.2rem 0;
+            }
+            .item-body {
+                padding-top: 5rem;
+                .body-group {
+                    display: flex;
+                    align-items: baseline;
+                }
+            }
+        }
+    }
+    .project {
+        &-name {
+            font-weight: $fontBold;
+            font-size: 2.4rem;
+            line-height: 3.6rem;
+            min-height: 7.2rem;
+            color: $black;
+            word-break: keep-all;
+        }
+        &-category {
+            margin-left: auto;
+            padding-left: 2rem;
+            font-size: 5rem;
+            font-weight: $fontBlack;
+            line-height: 4.6rem;
+            color: transparent;
+            -webkit-text-stroke: 0.2rem $black;
+            text-stroke: 0.2rem $black;
+        }
+        &-skills {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-top: 1rem;
+            .category-badge {
+                padding: 0 1rem;
+                margin-bottom: 0.4rem;
+                flex-shrink: 0;
+                font-size: 1.4rem;
+                line-height: 2rem;
+                background-color: $black;
+                color: $white;
+                border-radius: 1rem;
+                &:not(:last-child) { 
+                    margin-right: 0.4rem;
+                }
+            }
+        }
+        &-date {
+            padding: 1rem 0;
+            font-size: 1.6rem;
+            text-align: right;
+        }
+        &-img {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            // padding-top: calc(100% / 16 * 9); /* 16:9 적용 */
+            overflow: hidden;
+            .img-inner {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+            }
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+        &-link {
+            cursor: pointer;
+        }
+    }
+}
+
+/* animation */
+@-webkit-keyframes bgGradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+@-moz-keyframes bgGradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+@-ms-keyframes bgGradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+@-o-keyframes bgGradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+@keyframes bgGradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(360deg); }
+    to { -webkit-transform: rotate(0); }
+}
+@-moz-keyframes rotate {
+    from { -moz-transform: rotate(360deg); }
+    to { -moz-transform: rotate(0); }
+}
+@-ms-keyframes rotate {
+    from { -ms-transform: rotate(360deg); }
+    to { -ms-transform: rotate(0); }
+}
+@-o-keyframes rotate {
+    from { -o-transform: rotate(360deg); }
+    to { -o-transform: rotate(0); }
+}
+@keyframes rotate {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0); }
+}
